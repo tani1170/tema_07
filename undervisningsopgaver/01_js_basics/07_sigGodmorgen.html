@@ -9,27 +9,32 @@
 <body>
     
     <script>
-
+// få brower til at bruge default tids zone, her udskiver den både, dato, tid og tidszone
         const d = new Date();
+// udfra default tidzone, skal vi kun have fat i tiden
         let time = d.getHours();
         let resultat;
 
+// definer de forskellige variabler udfra tiden
+
+//hvis klokken er mere end 5 men mindre end 10
             if(time>5 && time<10){
                 resultat ="Godmorgen";
 
+//hvis klokken er mere 10 men mindre en 18
             } else if( time<18){
                resultat ="Goddag";
 
+ //hvis klokken er mere end 18 men mindre end 24
             } else if(time<24){
                resultat ="Godaften";
 
+//alt indimellem, som ikke er defineret.. mere end 24 men mindre end 5
             }  else{
                 resultat= "Godnat";
             }
 
             console.log(resultat)
-
-
 
     </script>
 </body>
