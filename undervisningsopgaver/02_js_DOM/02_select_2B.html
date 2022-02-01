@@ -72,9 +72,8 @@
                     <p></p>            
             </article>
             <article>
-                <img src="" alt="image">
-                    <h3></h3>
-                    <p></p>
+                    <!-- <h3></h3>
+                    <p></p> -->
             </article>
 
         </section>
@@ -96,9 +95,9 @@
         const article1txt =document.querySelector("article:nth-child(1) p " )
 
 
-        const article2pic =document.querySelector("article:nth-child(2) img " )
-        const article2title =document.querySelector("article:nth-child(2) h3 " )
-        const article2txt =document.querySelector("article:nth-child(2) p" )
+        const article2pic =document.querySelector("article:nth-child(2)" )
+        // const article2title =document.querySelector("article:nth-child(2) h3 " )
+        // const article2txt =document.querySelector("article:nth-child(2) p" )
 
         const footer = document.querySelector("footer h3") 
 
@@ -111,8 +110,8 @@
         console.log(article1txt);
 
         console.log(article2pic);
-        console.log(article2title);
-        console.log(article2txt);
+        // console.log(article2title);
+        // console.log(article2txt);
 
         console.log (footer);
  
@@ -120,12 +119,11 @@
         uTitle.textContent="Undertitle"
 
         article1pic.src="http://placeimg.com/640/480/any"
-        article1title.textContent="Article 1"
+        article1title.textContent="Article 1 textContent"
         article1txt.textContent="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
-        article2pic.src="http://placeimg.com/640/480/any"
-        article2title.textContent="Article 2"
-        article2txt.textContent="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+        article2pic.innerHTML="<img src='http://placeimg.com/640/480/any' alt='image'> <h3>Article 2 innerHTML</h3> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>";
+
         footer.textContent="This is a footer made in JavaScript "
 
 
