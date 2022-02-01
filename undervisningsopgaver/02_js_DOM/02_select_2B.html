@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--------------------------- CSS STYLE ------------------------>
+<style>
+
+    *{
+        margin: 0;
+        padding: 0%;
+      
+    }
+    
+     
+    article{
+        overflow: hidden;
+    }
+    
+    h1{
+        text-align: center;
+        margin: 3rem;
+    }
+    
+    
+    h2{
+        margin-left: 14rem;
+        font-style: bold;
+    }
+    
+    
+     footer h3{
+        text-align: center;
+        margin: 3rem;
+    
+    }
+    
+    
+        section{
+            max-width: 1000px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr) );
+            margin: auto;
+      
+    }
+    
+    article{
+    margin: 1rem;
+    }
+
+    
+    </style>
+    
+</head>
+
+<body>
+    <header>
+        <h1>Title</h1>
+        <hr>
+    </header>
+
+    <main>
+        <h2>Undertitle</h2>
+        <section>
+          
+            <article>
+                <img src="" alt="image">
+                    <h3></h3>
+                    <p></p>            
+            </article>
+            <article>
+                <img src="" alt="image">
+                    <h3></h3>
+                    <p></p>
+            </article>
+
+        </section>
+
+<footer>
+<hr>
+<h3>this is a footer</h3>
+<hr>
+</footer>
+    </main>
+
+    <!---------------------------- JAVASCRIPT ---------------------->
+<script>
+        const headtitle =document.querySelector("header h1")
+        const uTitle = document.querySelector("main h2")
+
+        const article1pic =document.querySelector("article:nth-child(1) img " )
+        const article1title =document.querySelector("article:nth-child(1) h3 " )
+        const article1txt =document.querySelector("article:nth-child(1) p " )
+
+
+        const article2pic =document.querySelector("article:nth-child(2) img " )
+        const article2title =document.querySelector("article:nth-child(2) h3 " )
+        const article2txt =document.querySelector("article:nth-child(2) p" )
+
+        const footer = document.querySelector("footer h3") 
+
+
+        console.log(headtitle);
+        console.log(uTitle);
+
+        console.log(article1pic);
+        console.log(article1title);
+        console.log(article1txt);
+
+        console.log(article2pic);
+        console.log(article2title);
+        console.log(article2txt);
+
+        console.log (footer);
+ 
+        headtitle.textContent="Title"
+        uTitle.textContent="Undertitle"
+
+        article1pic.src="http://placeimg.com/640/480/any"
+        article1title.textContent="Article 1"
+        article1txt.textContent="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
+        article2pic.src="http://placeimg.com/640/480/any"
+        article2title.textContent="Article 2"
+        article2txt.textContent="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+        footer.textContent="This is a footer made in JavaScript "
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
