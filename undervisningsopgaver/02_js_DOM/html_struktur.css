@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0%;
+  
+}
+
+ 
+article{
+    overflow: hidden;
+}
+
+h1{
+    text-align: center;
+    margin: 3rem;
+
+}
+
+
+h2{
+    margin-left: 14rem;
+    font-style: bold;
+}
+
+
+ footer h3{
+    text-align: center;
+    margin: 3rem;
+
+}
+
+
+    section{
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr) );
+        margin: auto;
+  
+}
+
+article{
+margin: 1rem;
+}
