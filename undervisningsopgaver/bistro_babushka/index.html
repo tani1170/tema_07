@@ -18,30 +18,66 @@
   </head>
 
   <body>
+    <template>
+      <article>
+        <img src="" alt="" />
+        <div>
+          <h2></h2>
+          <p class="kategori"></p>
+          <p class="tekst"></p>
+          <p class="pris">Pris:</p>
+        </div>
+      </article>
+    </template>
+
     <header>
       <h1>Bistro Babushka</h1>
     </header>
-    <nav>
-      <button>Alle</button>
-      <button>Forretter</button>
-      <button>Hovedretter</button>
-      <button>Desserter</button>
-    </nav>
+
+    <div class="headline">
+      <!-- filtreringsknapper med data attributter -->
+      <nav>
+        <button
+          class="filter"
+          data-ret="alle"
+        >
+          Alle
+        </button>
+        <button
+          class="filter"
+          data-ret="forretter"
+        >
+          Forretter
+        </button>
+        <button
+          class="filter"
+          data-ret="hovedretter"
+        >
+          Hovedretter
+        </button>
+        <button
+          class="filter"
+          data-ret="desserter"
+        >
+          Desserter
+        </button>
+        <!-- <button
+          class="filter"
+          data-ret="drikkevarer"
+        >
+          Drikkevarer
+        </button> -->
+      </nav>
+    </div>
+
     <main>
-      <h1 id="menuoverview">Menu</h1>
+      <h1 id="headline" data-overskrift>
+        Menu
+      </h1>
       <section
         class="dish_container"
       ></section>
-      <template>
-        <article>
-          <img src="" alt="" />
-          <h2></h2>
-          <p class="info"></p>
-          <p class="pris"></p>
-        </article>
-      </template>
     </main>
-
     <footer>
       <section>
         <address>
