@@ -41,9 +41,9 @@ function visRetter() {
         "medium/" +
         ret.billednavn +
         "-md.jpg";
-      klon.querySelector(
-        ".kategori"
-      ).textContent = ret.kategori;
+      // klon.querySelector(
+      //   ".kategori"
+      // ).textContent = ret.kategori;
       klon.querySelector(
         ".tekst"
       ).textContent =
