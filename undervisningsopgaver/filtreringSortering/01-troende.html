@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <style>
+      img {
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+      }
+
+      section {
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fill,
+          minmax(300px, 1fr)
+        );
+        gap: 30px;
+      }
+
+      article {
+        border: 1px solid
+          rgb(254, 107, 88);
+        border-radius: 10px;
+        padding: 1rem;
+      }
+
+      /* button {
+        margin: 1rem;
+        padding: 0.5rem;
+        border: 1px solid
+          rgb(254, 107, 88);
+        background-color: white;
+      }
+      button:hover {
+        border: 1px solid
+          rgb(254, 107, 88);
+        background-color: rgba(
+          254,
+          107,
+          88,
+          0.642
+        );
+      } */
+    </style>
+  </head>
+  <body>
+    <section></section>
+    <template>
+      <article id="liste">
+        <h2></h2>
+        <img src="" alt="" />
+        <p></p>
+      </article>
+    </template>
+    <script>
+      const container =
+        document.querySelector(
+          "section"
+        );
+      const template =
+        document.querySelector(
+          "template"
+        ).content;
+
+      let filter = "ja";
+
+      const url =
+        "https://tema7-ea04.restdb.io/rest/medlemmer";
+
+      const options = {
+        headers: {
+          "x-apikey":
+            "61fcf7e53f215f310a37be5c",
+        },
+      };
+
+      async function hentData() {
+        const resspons = await fetch(
+          url,
+          options
+        );
+        const json =
+          await resspons.json();
+        vis(json);
+      }
+
+      function vis(json) {
+        console.log(json);
+        json.forEach((person) => {
+          if (
+            filter == person.troende
+          ) {
+            const klon =
+              template.cloneNode(true);
+            klon.querySelector(
+              "h2"
+            ).textContent =
+              person.fornavn;
+            klon.querySelector(
+              "img"
+            ).src =
+              "/undervisningsopgaver/persongalleri/faces/" +
+              person.profilbillede;
+            klon.querySelector(
+              "p"
+            ).textContent =
+              person.email;
+            container.appendChild(klon);
+          }
+        });
+      }
+
+      hentData();
+    </script>
+  </body>
+</html>
