@@ -51,7 +51,7 @@ function visRetter() {
       klon.querySelector(
         ".pris"
       ).textContent +=
-        ret.pris + ".- kr";
+        ret.pris + " kr,-";
       klon
         .querySelector("article")
         .addEventListener(

@@ -7,14 +7,22 @@
       rel="stylesheet"
       href="bistro.css"
     />
+    <style>
+      img {
+        height: 100%;
+      }
+      p.pris {
+        font-weight: normal;
+      }
+    </style>
   </head>
 
-  <body id="single">
+  <body>
     <header>
       <h1>Bistro Babushka</h1>
     </header>
     <nav>
-      <button class="back">
+      <button class="backbtn">
         Tilbage
       </button>
     </nav>
@@ -24,9 +32,15 @@
         <img src="" alt="" />
         <div>
           <h2></h2>
-          <p class="kategori"></p>
           <p class="tekst"></p>
-          <p class="pris">Pris:</p>
+          <p class="land">
+            Denne opskrift kommer
+            oprindeligt fra
+          </p>
+          <p class="pris">
+            For at lave dette, skal du
+            ca. af med
+          </p>
         </div>
       </article>
     </main>
@@ -71,7 +85,7 @@
         visRetter();
       }
       document
-        .querySelector(".back")
+        .querySelector(".backbtn")
         .addEventListener(
           "click",
           () => {
@@ -90,16 +104,17 @@
           ret.billednavn +
           "-md.jpg";
         document.querySelector(
-          ".kategori"
-        ).textContent = ret.kategori;
-        document.querySelector(
           ".tekst"
         ).textContent =
-          ret.kortbeskrivelse;
+          ret.langbeskrivelse + ".";
+        document.querySelector(
+          ".land"
+        ).textContent +=
+          ret.oprindelsesregion;
         document.querySelector(
           ".pris"
         ).textContent +=
-          ret.pris + ".- kr";
+          ret.pris + "kr ,-";
       }
 
       getJson();
