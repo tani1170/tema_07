@@ -30,6 +30,7 @@
             Kort beskrivelse :
           </p>
           <p class="pris">Pris:</p>
+          <p class="kategori"></p>
         </div>
       </article>
     </template>
@@ -37,6 +38,18 @@
     <header>
       <h1>Bistro Babushka</h1>
     </header>
+
+    <aside>
+      <aside id="modal">
+        <article>
+          <img src="" alt="" />
+          <h2></h2>
+          <p></p>
+          <p></p>
+          <p></p>
+        </article>
+      </aside>
+    </aside>
 
     <div class="headline">
       <!-- filtreringsknapper med data attributter -->
@@ -65,12 +78,18 @@
         >
           Desserter
         </button>
-        <!-- <button
+        <button
+          class="filter"
+          data-ret="sideorders"
+        >
+          Sideorders
+        </button>
+        <button
           class="filter"
           data-ret="drikkevarer"
         >
           Drikkevarer
-        </button> -->
+        </button>
       </nav>
     </div>
 

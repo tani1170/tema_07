@@ -161,6 +161,20 @@ button:hover {
   color: white;
 }
 
+#modal {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #00000055;
+}
+
+#modal article {
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+}
+
 main {
   padding-left: 10rem;
   padding-right: 10rem;
